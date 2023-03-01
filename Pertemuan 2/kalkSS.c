@@ -1,4 +1,4 @@
-/*Nama File : KalkSS.c*/
+/*Nama File : kalkSS.c*/
 /*Deskripsi : Menghitung dan menampilkan operasi aritmatika sesuai dengan pilihan di layar*/
 /*Pembuat   : Nelvina Margery - 24060122120002*/
 /*Tanggal   : Rabu, 1 Maret 2023, 19.19*/
