@@ -1,32 +1,36 @@
-/*Nama File     : JumFrekNilTabel*/
-/*Deskripsi     : Menampilkan jumlah elemen tabel T yang kemunculannya lebih dari satu kali*/
-/*Pembuat       : Nelvina Margery/24060122120002*/
-/*Tanggal       : Sabtu, 18 Maret 2023, 20:01*/
+/*Nama File : JumFrekNilTabel*/
+/*Deskripsi : menampilkan jumlah nilai elemen tabel T yang kemunculannya lebih dari 1 kali*/
+/*Pembuat   : Nelvina Margery - 24060122120002*/
+/*Tanggal   : Minggu, 19 Maret 2023, 18.50*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main ()
+int main()
 {
     /*Kamus*/
-    int n,i,c;
-    int F[100];
+    int T[10] = {7,4,5,7,6,5,3,4,1,5};
+    int i, j, c, sum = 0;
+
     /*Algoritma*/
-    printf("Masukan nilai bilangan : ");
-    scanf("%d",&n);
-    printf("Masukan nilai tabel :\n");
-
-    int T[n];
-
-    for(i=0;i<n;i++){
-        scanf("%d", &T[i]);
-        F[T[i]] += 1;
+    printf("Tabel T : ");
+    for(i = 0; i <= 9; i++){
+        printf("%d ", T[i]);
     }
-    for(i=0;i<n;i++){
-        if(F[T[i]] > 1 ) {
-            c += T[i];
-            F[T[i]] = 0;
+
+    for(i = 0; i <= 10; i++){
+        c = 1;
+        for(j = i + 1; j <= 10; j++){ //{7,4,2,6,7,5,5,5,3}
+            if(T[i] != 0 && T[i] == T[j]){
+                c = c + 1;
+                T[j] = 0;
+            }
+        }
+        //printf("\n%d", c);
+        if(c != 1){
+                sum = sum + (c * T[i]);
         }
     }
-    printf("%d", c);
+    printf("\nJumlah nilai elemen tabel T yang frekuensinya lebih dari satu adalah : %d\n", sum);
     return 0;
 }
