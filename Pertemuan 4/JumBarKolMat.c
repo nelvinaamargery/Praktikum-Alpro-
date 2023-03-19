@@ -1,33 +1,28 @@
 /*Nama File     : JumBarKolMat*/
 /*Deskripsi     : Menampilkan jumlah setiap baris dan kolom pada tabel T (matriks)*/
 /*Pembuat       : Nelvina Margery/24060122120002*/
-/*Tanggal       : Sabtu, 18 Maret 2023, 11.35*/
+/*Tanggal       : Minggu, 19 Maret 2023, 19.15*/
 #include <stdio.h>
 #include <stdlib.h>
 
 int main ()
 {
     /*Kamus*/
-    int N,i,j,sumcol,sumrow;
+    int i,j,sumcol,sumrow;
 
     /*Algoritma*/
-    printf("N : ");
-    scanf("%d",&N);
-    printf("T :\n");
+    int T[3][3] = {{1,3,5}, {2,5,2}, {4,2,4}};
 
-    int T[N][N];
-
-    for(i=0;i<N;i++){
+    for(i=0;i<3;i++){
         sumrow = 0;
-        for(j=0;j<N;j++){
-            scanf("%d",&T[i][j]);
+        for(j=0;j<3;j++){
             sumrow += T[i][j];
         }
-        printf("%d\n",sumrow);
+        printf("%d\n", sumrow);
     }
-    for(i=0;i<N;i++){
+    for(i=0;i<3;i++){
         sumcol = 0;
-        for(j=0;j<N;j++){
+        for(j=0;j<3;j++){
             sumcol += T[j][i];
         }
         printf("%d\n", sumcol);
